@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parkour Extremo</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="main-menu">
+    <h1>Parkour Extremo</h1>
+
+    <div class="control-group">
+      <label for="difficulty-select">Dificultad:</label>
+      <select id="difficulty-select"></select>
+    </div>
+
+    <div class="control-group">
+      <label for="level-select">Nivel:</label>
+      <select id="level-select"></select>
+    </div>
+
+    <div class="buttons">
+      <button onclick="startGame()">Iniciar Juego</button>
+      <button onclick="abrirTienda()">Tienda</button>
+    </div>
+  </div>
+
+  <canvas id="gameCanvas" width="800" height="400" style="display:none;"></canvas>
+
+  <button id="volver-btn" onclick="volverAlMenu()" style="display:none;">🔙 Volver al Menú</button>
+
+  <div id="tienda" class="overlay" style="display:none;">
+    <button class="close-btn" onclick="cerrarTienda()">Cerrar Tienda</button>
+    <!-- Contenido de skins inyectado dinámicamente -->
+  </div>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
